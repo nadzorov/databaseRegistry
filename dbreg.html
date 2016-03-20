@@ -5,11 +5,23 @@
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 
+	<!-- rewrite  jquery.dataTables.min.css for search box-->
+	<!-- search box:  move to the left and make wider -->
+	<style type="text/css">
+		.dataTables_wrapper .dataTables_filter input {
+			width: 150px;
+		}
+		.dataTables_wrapper .dataTables_filter {
+			float: left;
+		}
+	</style>
+
 	<script type="text/javascript">
 		$(document).ready(function() {
 		    $('#dbreg').DataTable( {
 		    	"paging": false,
 		    	// "info": false,
+		    	// "dom": '<"top"i>rt<"bottom"flp><"clear">',
 		        "ajax": {
 		            "url": "/api/dbreg",
 		            "dataSrc": ""

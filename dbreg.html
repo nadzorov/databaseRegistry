@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+	<!-- https://datatables.net/examples/ajax/custom_data_flat.html -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+		    $('#dbreg').DataTable( {
+		    	"paging": false,
+		    	// "info": false,
+		        "ajax": {
+		            "url": "/api/dbreg",
+		            "dataSrc": ""
+		        },
+		        "columns": [
+					{ "data": "dbname" },
+					{ "data": "dbtype" },
+					{ "data": "dbversion" },
+					{ "data": "dboptimizerfeatures" },
+					{ "data": "dbcompatible" },
+					{ "data": "dblistenerport" },
+					{ "data": "dbos" },
+					{ "data": "dbhardware" },
+					{ "data": "dbservername" },
+					{ "data": "dbip" },
+					{ "data": "dbisvirtual" },
+					{ "data": "dbdatacenter" },
+					{ "data": "dbbackup" },
+					{ "data": "dbtsmclient" },
+					{ "data": "dbtsmserver" },
+					{ "data": "dbdba" },
+					{ "data": "dbstorage" },
+					{ "data": "dbprovisioning" },
+					{ "data": "dbrecreate" },
+					{ "data": "dbhome" },
+					{ "data": "dbbase" },
+					{ "data": "dbpurpose" }
+		        ]
+		    } );
+		} );
+	</script>
+
+</HEAD>
+<BODY>
+	<table id="dbreg" class="display compact" cellspacing="0" width="100%">
+	<!-- <table id="dblist" class="display compact" cellspacing="0" width="1%"> -->
+        <thead>
+            <tr>
+				<th>Название БД</th>
+				<th>Тип БД</th>
+				<th>Версия БД</th>
+				<th>Optimizer Features	</th>
+				<th>Compatible</th>
+				<th>Listener Port</th>
+				<th>ОС</th>
+				<th>Hardware</th>
+				<th>Название сервера</th>
+				<th>IP сервера</th>
+				<th>Виртуальный?</th>
+				<th>ЦОД</th>
+				<th>Backup</th>
+				<th>Клиент TSM</th>
+				<th>Сервер TSM</th>
+				<th>DBA</th>
+				<th>Storage</th>
+				<th>Provisioning</th>
+				<th>Пересоздание</th>
+				<th>ORACLE_HOME</th>
+				<th>ORACLE_BASE</th>
+				<th>НАЗНАЧЕНИЕ</th>
+            </tr>
+        </thead>
+    </table>
+</BODY>
+
+</HTML>
